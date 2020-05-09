@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Emojified Social Media</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/enter-view"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="container1">
+
+    </div>
+    <div>
+      <p class="title" id="title1">Em</p>
+      <p class="title" id="title2">😜</p>
+      <p class="title" id="title3">jified</p>
+      <p class="title" id="title4">S</p>
+      <p class="title" id="title5">😎</p>
+      <p class="title" id="title6">cial Media</p>
+      <p class="title" id="credit">Made By William Zhang.</p>
+    </div>
+    <div>
+      <p class="mainContent" id="intro">Emoji, developed from the 1990s, has become a complete and well-supported system today. We use emoji, sometimes to support our texts and express emotions, and sometimes, we spam emoji just to show the strong feeling within us. Emoji are so widely used, but <b>do we understand emoji enough?</b></p>
+      <p class="mainContent" id="intro2">Emoji are often misunderstood. This misunderstanding relates to the cultural or contextual interpretation of the emoji – when the author picks an emoji, they think about it in a certain way, but the same character may not trigger the same thoughts in the mind of the receiver.</p>
+      <p class="mainContent" id="intro3">🙂 → 😑</p>
+      <p class="mainContent" id="intro4">[A smiley face could be sent to convey <br>a despising, mocking, even obnoxious attitude.]</p>
+      <p class="mainContent" id="intro5">Researchers found that 40 percent of emoji tested had a “sentiment misconstrual score” of 2 or more, so when two people look at the same emoji, the sentiment disagreement between them would be much greater than that. <b>Now the question comes,</b> are you sure the emoji sent by you means exactly the same in the recipient's mind? Or are you certain how you perceive one emoji is what the majority does?</p>
+      <p class="mainContent" id="intro6">So, the data I found is a raw data set of <span class="highlightedNumber">18 million</span> unprocessed English tweets with at least one emojis, as well as a file about the how these emojis are used in Twitter: how many are used in positive, neutral and negative tweets, and base on that, I could calculate the sentiment score for each emoji – if it is used more in negative tweets, then it is more negative than positive.</p>
+      <p class="mainContent" id="intro7">Let's see what the data tells us ——</p>
+    </div>
+    <div>
+      <p class="mainContent" id="graph11"><b>Neutrality</b> - Neutral Occurrences ÷ Total Occurrences</p>
+      <p class="mainContent" id="graph12"><b>Sentiment Score</b> - (Positive Occurrences - Negative Occurrences) ÷ Total Occurrences</p>
+      <p class="mainContent" id="graph13">• The higher the emoji, the more neutral.</p>
+      <p class="mainContent" id="graph14">• Emojis on the right are more positive.</p>
+      <p class="mainContent" id="graph15">• The size shows the relative occurrences.</p>
+      <p class="mainContent" id="graph16">More emojis are clustering on <span class="interactiveBtn" id="clickToZoomIn1">the right hand side</span>, which shows there are more positive emojis (of course!), or to say, there are more positive tweets sent out each day.</p>
+      <p class="mainContent" id="graph1instruction1">[Please Double-click on the graph to zoom out.]</p>
+      <p class="mainContent" id="graph17">The emojis with more occurrences are all gathering in <span class="interactiveBtn" id="clickToZoomIn2">the lower middle part</span>, it seems the most popular emojis are all used for expressing emotions.</p>
+      <p class="mainContent" id="graph1instruction2">[Explore yourself by selecting an area on the graph.<br>Hover on the emojis to show detailed data.]</p>
+    </div>
+    <div>
+      <p class="mainContent" id="transition1">Most likely, you have encountered some emojis beyond your expectation - <b>some seemingly neutral emojis are used mostly in negative tweets??</b></p>
+      <p class="mainContent" id="transition2">The above are general cases, what about emojis in <b>individual</b> texts?</p>
+    </div>
+    <div class="spamming">
+      <p class="mainContent" id="spam1">Spamming</p>
+      <p class="mainContent" id="spam2">How many times do you spam emojis in text every day?  Surely a lot.</p>
+      <p class="mainContent" id="spam3">Among the <span class="highlightedNumber">6,000,000</span> texts processed,<br> <span class="interactiveBtn" id="spamPercentage">1,011,166</span> texts contains several spamming of one emoji!</p>
+      <p class="mainContent" id="spam4">And how many times is one emoji spammed in one text?</p>
+      <p class="mainContent" id="spam5">Let's <span id="changeToForce">See</span> ——</p>
+    </div>
+    <div id="containerfor2">
+      <div id="container2">
+
+      </div>
+    </div>
+
+    <div>
+      <p class="mainContent" id="spam01">Here are some randomly chosen emojis. The dots' radius represents the number of times the emoji is spammed in one text.</p>
+      <p class="mainContent" id="spam07">[Please wait until static...]</p>
+      <p class="mainContent" id="spam02"><span class="interactiveBtn" id="changeRandomForce">Show</span> some other commonly spammed emojis.</p>
+      <p class="mainContent" id="spam03"><span class="interactiveBtn" id="changeTopForce">List</span> the <b>top most spammed</b> emojis.</p>
+      <p class="mainContent" id="spam06">It is surely "Face With Tears of Joy😂", with the record of <span class="highlightedNumber">205795</span> spams in the 6,000,000. <br><br> <b>Following</b>:2.😭72205; 3.🔥65277; 4.😍36792; 5.❤36695; 6.👏26464; 7.🤣20125; 8.👉13115; 9.💕13086; 10.✅12335; </p>
+
+      <!-- <p class="mainContent" id="spam04"><span class="interactiveBtn" id="changeTopMostForce">The Best Spammer</span> in my dataset spams am astounding <span class="highlightedNumber">126</span> number of <span>EMOJIS</span> in one text. <br><br>126x🙄!! That guy must be really annoyed...</p> -->
+      <p class="mainContent" id="spam04"><b>The Best Spammer</b> in my dataset spams an <b>astounding</b> <span class="highlightedNumber">126</span> number of <span>EMOJIS</span> in one text. <br><br>126 times of 🙄!! That guy must be really annoyed...</p>
+      <p class="mainContent" id="spam05">With words, it is hard to directly express certain emotions, but with the strong visual cue of emojis, we could make sure our strong emotions be delivered 😜😜😜😜😜😜😜.</p>
+    </div>
+    <div class="position">
+      <p class="mainContent" id="position1">Position</p>
+      <p class="mainContent" id="position2">Where in your text do you often place your emojis? Probably in most of the times, it is more subconscious than intentional. <br><br>Could there be some pattern to find?</p>
+      <p class="mainContent" id="position3">[Left: the beginning of tweets, <br>Right: the end of tweets.]</p>
+      <p class="mainContent" id="position4">On average, an emoji is placed at <span class="highlightedNumber">2/3</span> of the length of a tweet.</p>
+    </div>
+    <div id="container3">
+
+    </div>
+
+    <div>
+      <p class="mainContent" id="transition3">Emoticons such as :-) are used sparsely and typically at the very end of a sentence. <br><br><b>Emojis</b>, on the other hand, appear in <b>groups</b> and not only at the end of the tweets.</p>
+    </div>
+
+    <div class="combination">
+        <p class="mainContent" id="combination1">Combination</p>
+        <p class="mainContent" id="combination2">In one text, what do you expect to combine the usage of different emojis? I randomly selected <span class="highlightedNumber">2000</span> tweets out of the 6,000,000 and filtered it with unique combinations with at least 3 different emojis.<br><br><br>Hover to figure out! </p>
+        <p class="mainContent" id="combination3">Surely, some stories could be found beneath the emojis, or are they unexpected? —— </p>
+        <p class="mainContent" id="combination4">• <span class="combSt" id="combSt1">😩🤣❤️</span>: <span id="st1"><i>"We literally drive eachother crazy..but only cause were crazy about eachother😩🤣❤️".</i></span></p>
+        <p class="mainContent" id="combination5">• <span class="combSt" id="combSt2">🌆👉🚖📞</span>: <span id="st2"><i>"RT: 🌆 👉🚖 For Taxi <br>&emsp;&emsp;&emsp; 📞703-445-4450".</i></span></p>
+        <p class="mainContent" id="combination6">• <span class="combSt" id="combSt3">💪🏻🇺🇸🦅</span>: <span id="st3"><i>"Army Vet Earl Granville carried a woman across the finish line of the Boston Marathon with one leg 💪🏻🇺🇸🦅 …".</i></span></p>
+    </div>
+    <div id="container">
+
+    </div>
+
+    <div class="textSenti">
+      <p class="mainContent" id="textSenti1">Text Sentiment vs. Emoji Sentiment</p>
+      <p class="mainContent" id="textSenti2">Critics of emoji have expressed that: <br>As we outsource our feelings to tiny pictures, it narrows our ability to express ourselves honestly. <br>When we use emojis, we’re not revealing our emotions—we’re often stifling them.</p>
+      <p class="mainContent" id="textSenti3">So, Are we <b>feeling less of the feels</b>, while <b>becoming more emotional on the social media?</b></p>
+      <p class="mainContent" id="textSenti4"><i>"In fact, we don’t even <b>have</b> emotions—we have feels. But maybe not all the feels."</i></p>
+      <p class="mainContent" id="textSenti5">I used the Natural Language Token and VADER (Valence Aware Dictionary and sEntiment Reasoner) library of Python to give the text sentiment scores separately from emojis and see how emoji is contributing to the emotion of the tweets.</p>
+      <p class="mainContent" id="textSenti6">I bet the graph is a bit <i>unexpected</i>? From the <b>positive</b> graph, it seems in most times, our emotion in our text conform with the emojis' emotion. <br>However, from the <b>negative</b> graph, most emojis' sentiment score are positive? <br>That opens a new topic beyond my reach, but we may guess that when we are expressing negative emotions, we tend to use positive emojis to cover it up? </p>
+    </div>
+    <div id="container5">
+
+    </div>
+    <div class="buttonForSentiPlot">
+      <p class="interactiveBtn" id="btnSentiText">Text Sentiment</p>
+      <p class="interactiveBtn" id="btnwSentiEmo">Emoji Sentiment</p>
+    </div>
+    <hr id="endSep">
+    <div class="generalConclusion">
+      <p class="mainContent" id="generalConclusion0"><i>"😁" <br> "Oof, sounds rough." <br> "Wait, what? That’s a smile…" <br> "No, it’s a grimace."</i></p>
+      <p class="mainContent" id="generalConclusion1">Emojis—🎉😎🚀🍕—began as a light-hearted🤍 way to breathe🌬️ life into our interactions🙆‍, and have since evolved into a creative art form🎨.</p>
+      <p class="mainContent" id="generalConclusion2">Now that our lives live online🌐, we are presented with daily conundrums at a dizzying pace💫. <br><br>When a friend’s dog🐕 dies, do we choose a sad reaction😥 on Facebook or repeat a platitude🙏🏻 that 10 others have already posted? <br><br>When your best friend says they’re feeling blue☄️, do you spend your limited bandwidth⌛ figuring out what to say🙊, or do you choose an appropriate gif🌆 to do it for you? <br><br>When an acquaintance bares their soul about a rocky⛰️ divorce, does it warrant a heart💖 or angry face👿? <br><br>Or do you just skim👀 past the post entirely, and blame the algorithm🧮 if they question your inaction🙈?</p>
+    </div>
+    <div id="container6">
+
+    </div>
+    <div class="end">
+      <p id="Ending0">🤔</p>
+      <p id="Ending1">😉</p>
+      <p id="Ending2">The End.❤</p>
+      <div id="forHeight">
+
+      </div>
+    </div>
+    <!-- <button type="button" name="testButton" id="testButton">!!TEST!!</button> -->
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
