@@ -12,8 +12,12 @@ Spring 2020 Critical Data &amp; Visualization Final Project
 
 &emsp;Hope you enjoy it!  
 
-![GIF DEMO](pics/ESM.gif)
 
+
+
+![GIF DEMO](pics/ESM.gif)  
+
+  
 #### Sources:  
 EmojifyData-EN: English tweets, with emojis:https://www.kaggle.com/rexhaif/emojifydata-en  
 Emoji Sentiment Ranking 1.0:https://www.clarin.si/repository/xmlui/handle/11356/1048  
