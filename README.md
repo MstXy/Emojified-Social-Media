@@ -9,7 +9,7 @@ Spring 2020 Critical Data &amp; Visualization Final Project
 &emsp;Therefore, for the project, it is a visualization of my result of the research mainly using d3.js library. It includes five different interactive graphs, each represents one aspect of my result.
 &emsp;Hope you enjoy it！
 
-![GIF DEMO](../pics/ESM/gif)
+![GIF DEMO](../pics/ESM.gif)
 
 #### Sources:
 EmojifyData-EN: English tweets, with emojis:https://www.kaggle.com/rexhaif/emojifydata-en
