@@ -2,6 +2,7 @@
 Spring 2020 Critical Data &amp; Visualization Final Project  
 
 ### Project Name: Emojified Social Media  
+### Project Link: https://mstxy.github.io/Emojified-Social-Media/
 
 #### Description  
 &emsp;The project is based on a raw dataset of 18 million unprocessed English tweets with at least one emojis, as well as a file about the how these emojis are used in Twitter: how many are used in positive, neutral and negative tweets.  
@@ -17,7 +18,7 @@ Spring 2020 Critical Data &amp; Visualization Final Project
 
 ![GIF DEMO](pics/ESM.gif)  
 
-  
+
 #### Sources:  
 EmojifyData-EN: English tweets, with emojis:https://www.kaggle.com/rexhaif/emojifydata-en  
 Emoji Sentiment Ranking 1.0:https://www.clarin.si/repository/xmlui/handle/11356/1048  
