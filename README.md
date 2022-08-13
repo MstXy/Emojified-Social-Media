@@ -1,4 +1,7 @@
 # Emojified-Social-Media  
+
+A d3.js data visualization project on Emoji usage.
+
 Spring 2020 Critical Data &amp; Visualization Final Project  
 
 ### Project Name: Emojified Social Media  
